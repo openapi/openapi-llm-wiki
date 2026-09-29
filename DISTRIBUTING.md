@@ -121,7 +121,12 @@ The `knowledge/oas/` folder is valuable on its own.
 | GitMCP | ✅ | https://gitmcp.io/openapi/openapi-llm-wiki | 2026-09-29 | Endpoint responds; setup documented in README |
 | Hugging Face dataset | 🟡 | | 2026-09-29 | Card + `huggingface.yml` ready; needs HF org, `HF_TOKEN` secret, `HF_DATASET_REPO` variable (HF user `openapi` is taken by a third party) |
 | APIs.guru | ☐ | | | |
-| awesome-api-italia | ☐ | | | |
+| awesome-api-italia | ✅ | https://github.com/openapi/awesome-api-italia | 2026-09-29 | "Strumenti e Librerie per Sviluppatori" |
+| Awesome-llms-txt | 🟡 | https://github.com/SecretiveShell/Awesome-llms-txt/pull/193 | 2026-09-29 | PR open |
+| llms-txt-hub (llmstxthub.com) | 🟡 | https://github.com/thedaviddias/llms-txt-hub/pull/1749 | 2026-09-29 | PR open |
+| awesome-context-engineering | 🟡 | https://github.com/yzfly/awesome-context-engineering/pull/69 | 2026-09-29 | PR open |
+| awesome-italia-opensource | 🟡 | https://github.com/italia-opensource/awesome-italia-opensource/pull/218 | 2026-09-29 | PR open |
+| awesome-openapi3 (APIs.guru) | ✅ | https://github.com/APIs-guru/awesome-openapi3 | 2026-09-29 | Picked up via the `openapi3` topic (no PR needed) |
 | Custom GPT | ☐ | | | |
 | Show HN | ☐ | | | |
 
