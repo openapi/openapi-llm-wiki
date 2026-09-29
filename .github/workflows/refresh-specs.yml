@@ -1,0 +1,46 @@
+name: Refresh OpenAPI specs
+
+on:
+  schedule:
+    - cron: "0 6 * * 1" # every Monday 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Download specs from 00-list.txt
+        run: |
+          while read -r url; do
+            [ -z "$url" ] && continue
+            name=$(basename "$url")
+            tmp=$(mktemp)
+            if curl -fsSL "$url" -o "$tmp" && jq -e '.openapi and .paths' "$tmp" > /dev/null; then
+              mv "$tmp" "knowledge/oas/$name"
+            else
+              echo "::warning::Skipping $name: download failed or not a valid spec"
+            fi
+          done < knowledge/oas/00-list.txt
+
+      - name: Rebuild llms files
+        run: ./scripts/build-llms.sh
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: chore/refresh-specs
+          delete-branch: true
+          commit-message: "chore(oas): refresh OpenAPI specs from console.openapi.com"
+          title: "chore(oas): refresh OpenAPI specs"
+          body: |
+            Automated weekly refresh of `knowledge/oas/` from the canonical URLs in
+            `knowledge/oas/00-list.txt`.
+
+            Before merging, update the matching `knowledge/services/*.md` pages for any
+            changed endpoints, then run `./scripts/build-llms.sh`.

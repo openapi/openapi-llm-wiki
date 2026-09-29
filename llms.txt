@@ -1,0 +1,54 @@
+# Openapi LLM Wiki
+
+> LLM-optimized knowledge base for the Openapi® API marketplace (https://openapi.com):
+> company profile, platform guide (OAuth v2, scopes, billing, sandbox, async patterns),
+> API catalog, per-service endpoint references and the official OpenAPI 3 specs.
+
+Load `platform-guide.md` together with any service page: it covers authentication and
+billing, which every service shares. The full knowledge base in one file is at
+https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/llms-full.txt
+
+## Core
+
+- [Who is Openapi?](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/company-profile.md)
+- [Openapi services catalog](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services-catalog.md)
+- [Platform guide: authentication, scopes, billing, sandbox](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/platform-guide.md)
+- [Openapi Console FAQ](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/faq.md)
+- [References](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/references.md)
+
+## Services
+
+- [RAG Management API](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/ai.md): base URL https://ai.openapi.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/ai.openapi.json
+- [Automotive](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/automotive.md): base URL https://automotive.openapi.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/automotive.openapi.json
+- [Bollettini](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/bollettini.md): base URL https://ws.pagasubito.it, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/bollettini.openapi.json
+- [Cap](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/cap.md): base URL https://cap.openapi.it, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/cap.openapi.json
+- [Catasto](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/catasto.md): base URL https://catasto.openapi.it, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/catasto.openapi.json
+- [Company](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/company.md): base URL https://company.openapi.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/company.openapi.json
+- [DocuEngine](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/docuengine.md): base URL https://docuengine.openapi.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/docuengine.openapi.json
+- [Domains](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/domains.md): base URL https://domains.altravia.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/domains.openapi.json
+- [E-Signature](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/esignature.md): base URL https://esignature.openapi.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/esignature.openapi.json
+- [Exchange](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/exchange.md): base URL https://exchange.altravia.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/exchange.openapi.json
+- [Firma Digitale](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/firmadigitale.md): base URL https://ws.firmadigitale.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/firmadigitale.openapi.json
+- [Gateway SMS](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/gatewaysms.md): base URL https://ws.messaggisms.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/gatewaysms.openapi.json
+- [Geocoding Api](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/geocoding.md): base URL https://geocoding.openapi.it, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/geocoding.openapi.json
+- [Imprese](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/imprese.md): base URL https://imprese.openapi.it, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/imprese.openapi.json
+- [Invoice](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/invoice.md): base URL https://invoice.openapi.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/invoice.openapi.json
+- [Marche Temporali](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/marchetemporali.md): base URL https://ws.marchetemporali.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/marchetemporali.openapi.json
+- [Oauth](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/oauth.md): base URL https://oauth.openapi.it, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/oauth.openapi.json
+- [Openapi OAuth Service](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/oauthv2.md): base URL https://oauth.openapi.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/oauthv2.openapi.json
+- [HTML to PDF](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/pdf.md): base URL https://pdf.openapi.it, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/pdf.openapi.json
+- [PEC Massiva 1.0](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/pecmassiva.md): base URL https://ws.pecmassiva.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/pecmassiva.openapi.json
+- [Pec (Posta Elettronica Certificata)](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/pec.md): base URL https://pec.openapi.it, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/pec.openapi.json
+- [Realestate](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/realestate.md): base URL https://realestate.openapi.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/realestate.openapi.json
+- [Risk](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/risk.md): base URL https://risk.openapi.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/risk.openapi.json
+- [SDI](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/sdi.md): base URL https://sdi.openapi.it, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/sdi.openapi.json
+- [Gateway SMS](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/smsv2.md): base URL https://sms.openapi.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/smsv2.openapi.json
+- [Trust](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/trust.md): base URL https://trust.openapi.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/trust.openapi.json
+- [Ufficio Postale](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/ufficiopostale.md): base URL https://ws.ufficiopostale.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/ufficiopostale.openapi.json
+- [Visengine 2.0](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/visengine.md): base URL https://visengine2.altravia.com, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/visengine.openapi.json
+- [Visure Camerali](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/services/visurecamerali.md): base URL https://visurecamerali.openapi.it, OpenAPI spec https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/visurecamerali.openapi.json
+
+## Optional
+
+- [Spec source URLs](https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/knowledge/oas/00-list.txt): canonical download URLs of every OpenAPI spec
+- [Repository](https://github.com/openapi/openapi-llm-wiki): source, issues and releases

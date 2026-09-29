@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this knowledge base, please cite it as below."
+type: dataset
+title: "Openapi LLM Wiki"
+abstract: >-
+  LLM-optimized knowledge base for the Openapi® API marketplace: company profile,
+  platform guide, API catalog, per-service endpoint references and the official
+  OpenAPI 3 specifications.
+authors:
+  - name: "Openapi SpA"
+    website: "https://openapi.com"
+repository-code: "https://github.com/openapi/openapi-llm-wiki"
+url: "https://github.com/openapi/openapi-llm-wiki"
+license: MIT
+version: 1.0.0
+date-released: 2026-09-29
+keywords:
+  - llm
+  - knowledge-base
+  - llms-txt
+  - rag
+  - openapi
+  - api-marketplace

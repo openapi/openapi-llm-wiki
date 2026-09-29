@@ -1,6 +1,6 @@
 # Knowledge base
 
-Everything needed to build and maintain the agent skills for interacting with the [Openapi](https://openapi.com) API marketplace.
+Everything an LLM or AI agent needs to know about the [Openapi](https://openapi.com) API marketplace. The same content is also available as [`llms.txt`](../llms.txt) (index) and [`llms-full.txt`](../llms-full.txt) (single file).
 
 ## Contents
 

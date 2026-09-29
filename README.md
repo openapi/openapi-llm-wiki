@@ -60,6 +60,12 @@ following approaches, depending on your workflow:
 4. **Openai-compatible providers with file upload**
    Upload the entire `knowledge/` tree as a project or knowledge base attachment.
 
+5. **llms.txt**
+   [`llms.txt`](llms.txt) indexes every file following the [llms.txt](https://llmstxt.org)
+   convention, and [`llms-full.txt`](llms-full.txt) packs the whole knowledge base into a single
+   file, ready to paste or fetch:
+   `https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/llms-full.txt`
+
 ### Lightweight browsing
 
 You can also browse the files manually to look up specific services, endpoints, or platform
@@ -100,6 +106,11 @@ openapi-llm-wiki/
 │       ├── company.openapi.json
 │       ├── risk.openapi.json
 │       └── ... (29 OAS files)
+├── scripts/
+│   └── build-llms.sh             ← regenerates llms.txt and llms-full.txt
+├── llms.txt                      ← llms.txt index of the knowledge base
+├── llms-full.txt                 ← the whole knowledge base in one file
+├── CITATION.cff
 ├── LICENSE
 └── README.md                     ← this file
 ```
@@ -130,9 +141,13 @@ The full list of spec URLs is in [`knowledge/oas/00-list.txt`](knowledge/oas/00-
 
 To refresh this knowledge base:
 
-1. Re-download each spec from its canonical URL into `knowledge/oas/`.
+1. Re-download each spec from its canonical URL into `knowledge/oas/`. The
+   [Refresh OpenAPI specs](.github/workflows/refresh-specs.yml) workflow does this every Monday
+   and opens a pull request when something changed.
 2. Regenerate the endpoint summaries in `knowledge/services/` from the updated specs.
-3. Review [`knowledge/services-catalog.md`](knowledge/services-catalog.md) and
+3. Run `./scripts/build-llms.sh` to regenerate `llms.txt` and `llms-full.txt` (CI fails if they
+   are stale).
+4. Review [`knowledge/services-catalog.md`](knowledge/services-catalog.md) and
    [`knowledge/platform-guide.md`](knowledge/platform-guide.md) for any platform-level changes.
 
 The [API Library](https://console.openapi.com/apis) in the Openapi console is the authoritative

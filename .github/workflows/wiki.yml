@@ -14,7 +14,7 @@ jobs:
     name: Validate knowledge base
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Validate OpenAPI JSON specs
         run: |
@@ -44,6 +44,14 @@ jobs:
             fi
           done
           exit $status
+
+      - name: Check llms.txt and llms-full.txt are up to date
+        run: |
+          ./scripts/build-llms.sh
+          if ! git diff --exit-code -- llms.txt llms-full.txt; then
+            echo "::error::llms.txt / llms-full.txt are stale: run ./scripts/build-llms.sh and commit"
+            exit 1
+          fi
 
       - name: Check internal Markdown links
         uses: lycheeverse/lychee-action@v2
