@@ -1,0 +1,13 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "Openapi LLM Wiki",
+  "description": "LLM-optimized knowledge base for the Openapi® API marketplace: platform guide (OAuth v2, billing, sandbox), API catalog, per-service endpoints and OpenAPI 3 specs.",
+  "branch": "main",
+  "folders": ["knowledge"],
+  "excludeFiles": ["00-list.txt"],
+  "rules": [
+    "Always read platform-guide.md together with any service page: authentication, scopes, billing and async patterns are shared by every service.",
+    "Get tokens from the OAuth v2 API (oauthv2); the old OAuth v1 API is deprecated.",
+    "For tests use the sandbox environment: free requests (enable \"sandbox credit\" in the console first), illustrative and possibly incomplete responses."
+  ]
+}
