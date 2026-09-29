@@ -30,7 +30,7 @@ Do this before any outreach: every channel below links back here.
 - [x] **`CITATION.cff`** so GitHub shows "Cite this repository" (needed for Zenodo too).
 - [x] **Scheduled refresh workflow** that re-downloads the specs from `00-list.txt` and opens a PR
       when they change: a visibly fresh repo gets ranked and re-indexed more often.
-- [ ] **GitHub Pages** (optional): serve `knowledge/` + `llms.txt` at a stable URL, e.g.
+- [x] **GitHub Pages**: serve `knowledge/` + `llms.txt` at a stable URL, e.g.
       `openapi.github.io/openapi-llm-wiki/llms.txt`, for crawlers that don't read GitHub.
 
 ## Phase 1 — GitHub ecosystem
@@ -123,7 +123,7 @@ The `knowledge/oas/` folder is valuable on its own.
 | APIs.guru | ☐ | | | |
 | awesome-api-italia | ✅ | https://github.com/openapi/awesome-api-italia | 2026-09-29 | "Strumenti e Librerie per Sviluppatori" |
 | Awesome-llms-txt | 🟡 | https://github.com/SecretiveShell/Awesome-llms-txt/pull/193 | 2026-09-29 | PR open |
-| llms-txt-hub (llmstxthub.com) | 🟡 | https://github.com/thedaviddias/llms-txt-hub/pull/1749 | 2026-09-29 | PR open |
+| llms-txt-hub (llmstxthub.com) | 🟡 | https://github.com/thedaviddias/llms-txt-hub/pull/1749 | 2026-09-29 | PR open; moved to GitHub Pages URLs for the site-family check, waiting for maintainer to approve workflows |
 | awesome-context-engineering | 🟡 | https://github.com/yzfly/awesome-context-engineering/pull/69 | 2026-09-29 | PR open |
 | awesome-italia-opensource | 🟡 | https://github.com/italia-opensource/awesome-italia-opensource/pull/218 | 2026-09-29 | PR open |
 | awesome-openapi3 (APIs.guru) | 🟡 | https://github.com/APIs-guru/awesome-openapi3 | 2026-09-29 | `openapi3` topic added; their site regenerates daily from the topic, to verify |
