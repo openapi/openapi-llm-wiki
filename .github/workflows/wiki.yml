@@ -1,0 +1,52 @@
+name: Wiki CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate knowledge base
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate OpenAPI JSON specs
+        run: |
+          status=0
+          for f in knowledge/oas/*.openapi.json; do
+            if ! jq -e '.openapi and .paths' "$f" > /dev/null; then
+              echo "::error file=$f::Invalid JSON or missing 'openapi'/'paths' keys"
+              status=1
+            fi
+          done
+          exit $status
+
+      - name: Check every spec has a service page (and vice versa)
+        run: |
+          diff \
+            <(ls knowledge/oas/*.openapi.json | xargs -n1 basename | sed 's/\.openapi\.json$//' | sort) \
+            <(ls knowledge/services/*.md | xargs -n1 basename | sed 's/\.md$//' | sort)
+
+      - name: Check every spec is listed in 00-list.txt
+        run: |
+          status=0
+          for f in knowledge/oas/*.openapi.json; do
+            name=$(basename "$f")
+            if ! grep -q "/${name}$" knowledge/oas/00-list.txt; then
+              echo "::error file=knowledge/oas/00-list.txt::Missing entry for ${name}"
+              status=1
+            fi
+          done
+          exit $status
+
+      - name: Check internal Markdown links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --no-progress --include-fragments '**/*.md'
+          fail: true

@@ -1,0 +1,14 @@
+Image Description Sheet
+-----------------------
+
+File Name: repo-header-a4.png
+Format: PNG
+Dimensions: 830 x 173 pixels
+
+Short Description:
+A banner image featuring the Openapi logo and the "API Made Simple" tagline on the left,
+and an isometric laptop with floating dashboard windows on the right.
+
+Purpose:
+This image is intended to be used as a header/banner for the Openapi LLM Wiki README,
+giving a professional and modern look to the project materials.

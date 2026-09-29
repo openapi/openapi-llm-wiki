@@ -13,7 +13,23 @@
 
 ---
 
-# Openapi LLM Wiki
+<div align="center">
+  <a href="https://openapi.com/">
+    <img alt="Openapi LLM Wiki" src=".github/assets/images/repo-header-a4.png">
+  </a>
+
+  <h1>📚 Openapi® LLM Wiki</h1>
+  <h4>An LLM-optimized knowledge base to ground any AI agent on the <a href="https://openapi.com/">Openapi®</a> API marketplace</h4>
+
+[![Wiki CI](https://github.com/openapi/openapi-llm-wiki/actions/workflows/wiki.yml/badge.svg)](https://github.com/openapi/openapi-llm-wiki/actions/workflows/wiki.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Services](https://img.shields.io/badge/services-29-blueviolet)](knowledge/services/)
+[![OpenAPI specs](https://img.shields.io/badge/OAS-29-4f46e5)](knowledge/oas/)
+<br>
+[![Linux Foundation Member](https://img.shields.io/badge/Linux%20Foundation-Silver%20Member-003778?logo=linux-foundation&logoColor=white)](https://www.linuxfoundation.org/about/members)
+</div>
+
+---
 
 A structured, LLM-optimized knowledge base for the [Openapi](https://openapi.com) API marketplace.
 Drop the contents of [`knowledge/`](knowledge/) into any LLM context to ground it with authoritative,
@@ -78,7 +94,7 @@ openapi-llm-wiki/
 │   │   ├── company.md
 │   │   ├── risk.md
 │   │   ├── smsv2.md
-│   │   └── ... (28 service files)
+│   │   └── ... (29 service files)
 │   └── oas/                      ← snapshot of official OpenAPI 3 specifications
 │       ├── 00-list.txt           ← canonical URLs for all specs
 │       ├── company.openapi.json
@@ -122,6 +138,41 @@ To refresh this knowledge base:
 The [API Library](https://console.openapi.com/apis) in the Openapi console is the authoritative
 source for which APIs are active, deprecated, or newly introduced.
 
+## Contributing
+
+Contributions are always welcome! Whether you want to report bugs, suggest new features, improve documentation, or contribute code, your help is appreciated.
+
+## Authors
+
+- Francesco Bianco ([@francescobianco](https://www.github.com/francescobianco))
+- Openapi Team ([@openapi-it](https://github.com/openapi-it))
+
+## Partners
+
+Meet our partners using Openapi or contributing to this project:
+
+- [Blank](https://www.blank.app/)
+- [Credit Safe](https://www.creditsafe.com/)
+- [Deliveroo](https://deliveroo.it/)
+- [Gruppo MOL](https://molgroupitaly.it/it/)
+- [Jakala](https://www.jakala.com/)
+- [Octotelematics](https://www.octotelematics.com/)
+- [OTOQI](https://otoqi.com/)
+- [PWC](https://www.pwc.com/)
+- [QOMODO S.R.L.](https://www.qomodo.me/)
+- [SOUNDREEF S.P.A.](https://www.soundreef.com/)
+
+## Our Commitments
+
+We believe in open source and we act on that belief. We became Silver Members
+of the Linux Foundation because we wanted to formally support the ecosystem
+we build on every day. Open standards, open collaboration, and open governance
+are part of how we work and how we think about software.
+
 ## License
 
-MIT — see [LICENSE](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
+
+The MIT License is a permissive open-source license that allows you to freely use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, provided that the original copyright notice and this permission notice are included in all copies or substantial portions of the software.
+
+For more details, see the full license text at the [MIT License page](https://choosealicense.com/licenses/mit/).
