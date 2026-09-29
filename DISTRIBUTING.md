@@ -126,7 +126,7 @@ The `knowledge/oas/` folder is valuable on its own.
 | llms-txt-hub (llmstxthub.com) | 🟡 | https://github.com/thedaviddias/llms-txt-hub/pull/1749 | 2026-09-29 | PR open |
 | awesome-context-engineering | 🟡 | https://github.com/yzfly/awesome-context-engineering/pull/69 | 2026-09-29 | PR open |
 | awesome-italia-opensource | 🟡 | https://github.com/italia-opensource/awesome-italia-opensource/pull/218 | 2026-09-29 | PR open |
-| awesome-openapi3 (APIs.guru) | ✅ | https://github.com/APIs-guru/awesome-openapi3 | 2026-09-29 | Picked up via the `openapi3` topic (no PR needed) |
+| awesome-openapi3 (APIs.guru) | 🟡 | https://github.com/APIs-guru/awesome-openapi3 | 2026-09-29 | `openapi3` topic added; their site regenerates daily from the topic, to verify |
 | Custom GPT | ☐ | | | |
 | Show HN | ☐ | | | |
 
