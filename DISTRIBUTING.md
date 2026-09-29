@@ -117,9 +117,9 @@ The `knowledge/oas/` folder is valuable on its own.
 | Release v1.0.0 | ✅ | https://github.com/openapi/openapi-llm-wiki/releases/tag/v1.0.0 | 2026-09-29 | Built by `release.yml` on tag push |
 | Social preview | ☐ | | | |
 | Context7 | ☐ | | | |
-| DeepWiki | ☐ | | | |
-| GitMCP | ☐ | | | |
-| Hugging Face dataset | ☐ | | | |
+| DeepWiki | 🟡 | https://deepwiki.com/openapi/openapi-llm-wiki | 2026-09-29 | Badge in README; indexing to verify |
+| GitMCP | ✅ | https://gitmcp.io/openapi/openapi-llm-wiki | 2026-09-29 | Endpoint responds; setup documented in README |
+| Hugging Face dataset | 🟡 | | 2026-09-29 | Card + `huggingface.yml` ready; needs HF org, `HF_TOKEN` secret, `HF_DATASET_REPO` variable (HF user `openapi` is taken by a third party) |
 | APIs.guru | ☐ | | | |
 | awesome-api-italia | ☐ | | | |
 | Custom GPT | ☐ | | | |

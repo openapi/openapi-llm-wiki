@@ -56,5 +56,6 @@ jobs:
       - name: Check internal Markdown links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --offline --no-progress --include-fragments '**/*.md'
+          # huggingface/README.md links to files that only exist in the built dataset
+          args: --offline --no-progress --include-fragments --exclude-path huggingface '**/*.md'
           fail: true

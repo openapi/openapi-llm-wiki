@@ -1,0 +1,36 @@
+name: Sync to Hugging Face
+
+on:
+  # Tag push, not release events: releases made by GITHUB_TOKEN don't trigger other workflows
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    # Needs the HF_TOKEN secret (write token) and the HF_DATASET_REPO variable, e.g. my-org/openapi-llm-wiki
+    if: vars.HF_DATASET_REPO != ''
+    env:
+      HF_DATASET_REPO: ${{ vars.HF_DATASET_REPO }}
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Build dataset folder
+        run: ./scripts/build-hf-dataset.py dist/hf
+
+      - name: Upload to Hugging Face
+        run: |
+          pip install --quiet "huggingface_hub>=2,<3"
+          hf repos create "$HF_DATASET_REPO" --repo-type dataset --exist-ok
+          hf upload "$HF_DATASET_REPO" dist/hf . --repo-type dataset \
+            --delete "*" \
+            --commit-message "Sync from ${GITHUB_REPOSITORY}@${GITHUB_REF_NAME}"

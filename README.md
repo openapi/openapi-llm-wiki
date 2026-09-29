@@ -25,6 +25,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Services](https://img.shields.io/badge/services-29-blueviolet)](knowledge/services/)
 [![OpenAPI specs](https://img.shields.io/badge/OAS-29-4f46e5)](knowledge/oas/)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/openapi/openapi-llm-wiki)
 <br>
 [![Linux Foundation Member](https://img.shields.io/badge/Linux%20Foundation-Silver%20Member-003778?logo=linux-foundation&logoColor=white)](https://www.linuxfoundation.org/about/members)
 </div>
@@ -66,6 +67,36 @@ following approaches, depending on your workflow:
    file, ready to paste or fetch:
    `https://raw.githubusercontent.com/openapi/openapi-llm-wiki/main/llms-full.txt`
 
+### As an MCP server (GitMCP)
+
+[GitMCP](https://gitmcp.io) serves this repository as a remote MCP server, so any MCP client can
+search and fetch the wiki on demand (it reads [`llms.txt`](llms.txt) first):
+
+```
+https://gitmcp.io/openapi/openapi-llm-wiki
+```
+
+Claude Code:
+
+```bash
+claude mcp add --transport http openapi-llm-wiki https://gitmcp.io/openapi/openapi-llm-wiki
+```
+
+Cursor, Windsurf, VS Code and other clients (`mcp.json`):
+
+```json
+{
+  "mcpServers": {
+    "openapi-llm-wiki": {
+      "url": "https://gitmcp.io/openapi/openapi-llm-wiki"
+    }
+  }
+}
+```
+
+You can also ask questions about the wiki in plain language on
+[DeepWiki](https://deepwiki.com/openapi/openapi-llm-wiki).
+
 ### Lightweight browsing
 
 You can also browse the files manually to look up specific services, endpoints, or platform
@@ -106,8 +137,11 @@ openapi-llm-wiki/
 │       ├── company.openapi.json
 │       ├── risk.openapi.json
 │       └── ... (29 OAS files)
+├── huggingface/
+│   └── README.md                 ← Hugging Face dataset card
 ├── scripts/
-│   └── build-llms.sh             ← regenerates llms.txt and llms-full.txt
+│   ├── build-llms.sh             ← regenerates llms.txt and llms-full.txt
+│   └── build-hf-dataset.py       ← builds the Hugging Face dataset folder
 ├── llms.txt                      ← llms.txt index of the knowledge base
 ├── llms-full.txt                 ← the whole knowledge base in one file
 ├── CITATION.cff
