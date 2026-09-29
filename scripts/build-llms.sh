@@ -2,6 +2,7 @@
 # Generate llms.txt (index) and llms-full.txt (full content) from knowledge/.
 # See https://llmstxt.org for the format. Run from anywhere: ./scripts/build-llms.sh
 set -euo pipefail
+export LC_ALL=C # stable glob order across machines
 
 cd "$(dirname "$0")/.."
 

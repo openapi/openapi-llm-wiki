@@ -993,31 +993,6 @@ Generate a PDF document from a web page or an HTML string
 | POST | `/base` | Create a simple PDF file |
 
 ---
-<!-- source: knowledge/services/pecmassiva.md -->
-
-# PEC Massiva 1.0
-
-- **Base URL**: `https://ws.pecmassiva.com`
-- **OAS file**: [`knowledge/oas/pecmassiva.openapi.json`](../oas/pecmassiva.openapi.json)
-- **Version**: 1.0.0
-
-## Description
-
-This service offers rest calls to send massive pecs and check the status of the delivery verification and receipt verification emails
-
-## Endpoints
-
-| Method | Path | Summary |
-|---|---|---|
-| GET | `/send/{code}` | List of all the emails related to a given sending |
-| DELETE | `/send/{code}` | Delete all the emails related to a given sending |
-| POST | `/send` | Send a PEC to the recipient sent |
-| GET | `/inbox/{id}` | Returns a single message in the INBOX |
-| DELETE | `/inbox/{id}` | Delete an email |
-| GET | `/inbox` | Get a list of emails in your inbox |
-| GET | `/quota/{mailbox}` | Returns the usage of you INBOX |
-
----
 <!-- source: knowledge/services/pec.md -->
 
 # Pec (Posta Elettronica Certificata)
@@ -1053,6 +1028,31 @@ Web service that allows you to activate a certified e-mail.
 | GET | `/pec/{id}/modulo_attivazione` | Download the activation form |
 | GET | `/pec/{id}/modulo_conservazione` | Download the activation form |
 | GET | `/comunica_pec/{id}/procura_registro_imprese` | Download the power of attorney |
+
+---
+<!-- source: knowledge/services/pecmassiva.md -->
+
+# PEC Massiva 1.0
+
+- **Base URL**: `https://ws.pecmassiva.com`
+- **OAS file**: [`knowledge/oas/pecmassiva.openapi.json`](../oas/pecmassiva.openapi.json)
+- **Version**: 1.0.0
+
+## Description
+
+This service offers rest calls to send massive pecs and check the status of the delivery verification and receipt verification emails
+
+## Endpoints
+
+| Method | Path | Summary |
+|---|---|---|
+| GET | `/send/{code}` | List of all the emails related to a given sending |
+| DELETE | `/send/{code}` | Delete all the emails related to a given sending |
+| POST | `/send` | Send a PEC to the recipient sent |
+| GET | `/inbox/{id}` | Returns a single message in the INBOX |
+| DELETE | `/inbox/{id}` | Delete an email |
+| GET | `/inbox` | Get a list of emails in your inbox |
+| GET | `/quota/{mailbox}` | Returns the usage of you INBOX |
 
 ---
 <!-- source: knowledge/services/realestate.md -->
